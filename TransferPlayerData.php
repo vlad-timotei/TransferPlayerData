@@ -38,19 +38,19 @@ function getOldData() {
     //Gets 1st generation data from Cookies
     if (getLS(game) == 0 && getLC(game) != 0) {
 	    player.level = getLC(game);
-		setLC(game, "", -1);
+		//setLC(game, "", -1);
 		player.mode = getLC(game+"_mode");
-		setLC(game + "_mode", "", -1);
+		//setLC(game + "_mode", "", -1);
 		player.score = getLC(game+"_score"); 
-		setLC(game + "_score", "", -1); 
+		//setLC(game + "_score", "", -1); 
     }else{
 	//Gets 2nd generation data from Local Storage raduanastase.com
 		player.level = getLS(game);
-		localStorage.removeItem(game);
+		//localStorage.removeItem(game);
 		player.score = getLS(game+"_score"); 
-		localStorage.removeItem(game+"_score");
+		//localStorage.removeItem(game+"_score");
 		player.mode = getLS(game+"_mode"); 
-		localStorage.removeItem(game+"_mode");
+		//localStorage.removeItem(game+"_mode");
 	}
 	//Sends data to parent
     var playerdata = JSON.stringify(player);
